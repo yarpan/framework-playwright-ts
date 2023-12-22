@@ -16,21 +16,3 @@ test('get started link', async ({ page }) => {
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
-
-
-test.beforeEach(async ({ page }) => {
-  await page.goto('https://www.wikipedia.org/');
-});
-
-test.describe('Wiki tests', () => {
-  test('check Wiki title', async ({ page }) => {
-    await expect(page).toHaveTitle(/Wikipedia/);
-  });
-
-    test('check English version', async ({ page }) => {
-      await expect(page).toHaveTitle(/Wikipedia/);
-    })
-
-
-
-})
