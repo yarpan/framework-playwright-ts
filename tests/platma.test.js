@@ -1,8 +1,3 @@
-
-// Розвернути playwright проект (init)
-// запустити тест з прикладу. Запустити UIно, та через консоль
-// створити сласних 5 тестів з перевірками по 3-5 елементів в кожному
-
 import { test, expect } from "@playwright/test";
 const baseUri = 'https://platma.com/';
 
