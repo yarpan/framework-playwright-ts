@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { HomePage } from "../pages/homePage";
-import { ContactPage } from "../pages/contactPage";
+import { ContactPage } from "../pages/contactsPage";
 import { CasesPage } from "../pages/casesPage";
 
 test('Open home page', async ({ page }) => {
@@ -47,8 +47,3 @@ test('Use case - Workflow builder', async ({ page }) => {
     await casesPage.clickSubPageOptimizingBusProc();
     await casesPage.isSubPageLoadedOptimizingBusProc();
 })
-
-
-
-
-
