@@ -1,6 +1,6 @@
 import { test } from '@playwright/test'
-import { getLatestEmail } from 'email-api'
-import { EmailPage } from 'email-page'
+import { getLatestEmail } from '../services/email-api'
+import { EmailPage } from '../services/email-page'
 
 test('reset password', async ({ page }) => {
   // do something to trigger email sending

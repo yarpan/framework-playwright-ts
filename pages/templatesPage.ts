@@ -1,8 +1,8 @@
 import { expect, type Locator, type Page } from '@playwright/test';
 //TODO
-const baseUri = "https://platma.com/";
+const baseUri = "https://platma.com/platmas-ready-made-templates/";
 const pageTitle = "PLATMA";
-const uniqueElementXpath = "";
+const uniqueElementXpath = "//div[@class='templates_hero_list']";;
 
 export class HomePage {
     readonly page: Page;

@@ -1,8 +1,8 @@
 import { expect, type Locator, type Page } from '@playwright/test';
 //TODO
-const baseUri = "https://platma.com/";
+const baseUri = "https://platma.com/blog/";
 const pageTitle = "PLATMA";
-const uniqueElementXpath = "";
+const uniqueElementXpath = "//div[@class='subscribe_info']";
 
 export class HomePage {
     readonly page: Page;
