@@ -5,7 +5,7 @@ const pageTitle = "Still have questions? Contact us";
 const uniqueElementXpath = "//div[text()='Our addresses:']";
 const validationErrorClass = "inputForm error";
 
-export class ContactPage {
+export class ContactsPage {
     readonly page: Page;
     readonly sendFeedbackButton: Locator;
     readonly inputNameFieldLocator: Locator;

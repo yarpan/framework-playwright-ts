@@ -1,11 +1,12 @@
-import fetch from 'node-fetch'
+import { test, expect, request } from "@playwright/test";
+import {RequestInfo, RequestInit, Response} from 'node-fetch'
 import { URLSearchParams } from 'url'
 
-const baseUrl = 'https://api.mail7.io'
+const baseUrl = 'https://api.mail7.io';
 
 const keys = {
-  apikey: '<your_api_key>',
-  apisecret: '<your_secret_key>',
+  apikey: 'xxxxxxxxxx',
+  apisecret: 'xxxxxxxxxx',
 }
 
 const requestOptions = {
@@ -15,7 +16,7 @@ const requestOptions = {
 }
     
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
-    
+
 export type Email = {
   from: string
   to: string
@@ -32,7 +33,7 @@ export const getLatestEmail = async (email: string): Promise<Email> => {
   do {
     const response = await fetch(url, requestOptions)
     if (response.ok) {
-      const body = await response.json()
+      const body: any = await response.json()
       if (body.data.length > 0) {
         const mesId = body.data[0]._id
         const rawEmail = body.data[0].mail_source

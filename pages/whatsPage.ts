@@ -1,34 +1,23 @@
 import { expect, type Locator, type Page } from '@playwright/test';
-//TODO
-const baseUri = "https://platma.com/whats-platma/";
-const pageTitle = "PLATMA";
-const uniqueElementXpath = "//div[@class='whats_points_item_point_title']";
 
-export class HomePage {
+const pageUri = "https://platma.com/whats-platma/";
+const pageTitle = "PLATMA allows you to create IT solutions fast and easy";
+const uniqueElementXpath = "(//div[@class='whats_points_item_point_title'])[1]";
+
+export class WhatsPage {
     readonly page: Page;
-    readonly buttonMenuContact: Locator;
-    readonly buttonMenuCases: Locator;
 
     constructor(page: Page) {
         this.page = page;
-        this.buttonMenuContact = page.locator("");
-        this.buttonMenuCases = page.locator("");
     }
 
     async goto() {
-        await this.page.goto(baseUri);
+        await this.page.goto(pageUri);
     }
 
     async isPageLoaded() {
-        expect(this.page.url()).toBe(baseUri);
+        expect(this.page.url()).toBe(pageUri);
         await expect(this.page).toHaveTitle(pageTitle);
         await expect(this.page.locator(uniqueElementXpath)).toBeVisible();
     }
-
-    async clickMenuItemContacts() {
-        await expect(this.buttonMenuContact).toBeVisible();
-        await this.buttonMenuContact.click();
-    }
-
-
 }

@@ -8,7 +8,7 @@ export class EmailPage {
 
   constructor(page: Page) {
     this.page = page
-    this.resetPasswordLink = this.page.locator('text="Reset Your Password"')
+    this.resetPasswordLink = this.page.locator('text="Please use the link to validate your email address"')
   }
 
   async renderContent(content: string) {
