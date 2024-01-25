@@ -52,7 +52,6 @@ test('Open page Blog from menu', async ({ page }) => {
 test('Open page Team from menu', async ({ page }) => {
     const homePage = new HomePage(page);
     await homePage.goto();
-    //await homePage.clickMenuItem('Team');
     await homePage.clickMenuItem(homePage.mainMenu.item5);
 
     const teamPage = new TeamPage(page);
