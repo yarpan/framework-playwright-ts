@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { LandingPage } from "../pages/wikiEngPage";
+import { LandingPage } from "./wikiEngPage";
 
 const baseURL = 'https://www.wikipedia.org/'
 const englishButton = '//a[@id="js-link-box-en"]'

@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { HomePage } from "../pages/homePage";
-import { ContactPage } from "../pages/contactPage";
+import { ContactsPage } from "../pages/contactsPage";
 import { CasesPage } from "../pages/casesPage";
 
 test('Open home page', async ({ page }) => {
@@ -14,12 +14,12 @@ test('Open page Contacts from menu', async ({ page }) => {
     await homePage.goto();
     await homePage.clickMenuItemContacts();
 
-    const contactPage = new ContactPage(page);
+    const contactPage = new ContactsPage(page);
     await contactPage.isPageLoaded();
 })
 
 test('Show validation on sending empty feedback', async ({ page }) => {
-    const contactPage = new ContactPage(page);
+    const contactPage = new ContactsPage(page);
     await contactPage.goto();
     await contactPage.isPageLoaded();
     await contactPage.clickButtonFeedback();
