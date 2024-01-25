@@ -1,58 +1,40 @@
-import { expect, type Locator, type Page } from '@playwright/test';
+import { expect, type Locator, type Page } from "@playwright/test";
 
 const pageUri = "https://platma.com/cases/";
 const pageTitle = "Cases - platma";
-const urlSubPageBuildingRobustWebApp = pageUri + "building-robust-web-applications-best-practices-and-tips/";
-const titleSubPageBuildingRobustWebApp = "Building Robust Web Applications: Best Practices and Tips - platma";
-const urlSubPageOptimizingBusPro = pageUri + "optimizing-business-processes-with-workflow-builders/";
-const titleSubPageOptimizingBusPro = "Optimizing Business Processes with Workflow Builders - platma";
+const xpathCommonForSubPages = "//div[@class='case_item_title colored_text']//a[@title='";
+const xpathCommonForUniqueText = '//p[contains(text(), "';
 
 export class CasesPage {
-    readonly page: Page;
-    readonly pageUniqueElementXpath: Locator;
-    readonly linkSubPageBuildingRobustWebApp: Locator;
-    readonly uniqeElementSubPageBuildingRobustWebApp: Locator;
-    readonly linkSubPageOptimizingBusPro: Locator;
-    readonly uniqeElementSubPageOptimizingBusPro: Locator;
+  readonly page: Page;
+  readonly pageUniqueElementXpath: Locator;
 
-    constructor(page: Page) {
-        this.page = page;
-        this.pageUniqueElementXpath = page.locator("//div[@class='header_logo']");
-        this.linkSubPageBuildingRobustWebApp = page.locator("(//a[@title='Building Robust Web Applications: Best Practices and Tips'])[2]");
-        this.uniqeElementSubPageBuildingRobustWebApp = page.locator("//div[text()='Web application development']");
-        this.linkSubPageOptimizingBusPro = page.locator("(//a[@title='Optimizing Business Processes with Workflow Builders'])[2]");
-        this.uniqeElementSubPageOptimizingBusPro = page.locator("//div[text()='WorkFlow builder']");
-    }
+  constructor(page: Page) {
+    this.page = page;
+    this.pageUniqueElementXpath = page.locator("//div[@class='header_logo']");
+  }
 
-    async goto() {
-        await this.page.goto(pageUri);
-    }
+  async goto() {
+    await this.page.goto(pageUri);
+  }
 
-    async isPageLoaded() {
-        expect(this.page.url()).toBe(pageUri);
-        await expect(this.page).toHaveTitle(pageTitle);
-        await expect(this.pageUniqueElementXpath).toBeVisible();
-    }
+  async isPageLoaded() {
+    expect(this.page.url()).toBe(pageUri);
+    await expect(this.page).toHaveTitle(pageTitle);
+    await expect(this.pageUniqueElementXpath).toBeVisible();
+  }
 
-    async clickSubPageBuildingRobustWebApp() {
-        await expect(this.linkSubPageBuildingRobustWebApp).toBeVisible();
-        await this.linkSubPageBuildingRobustWebApp.click();
-    }
+  async openSubPage(sub_locator: string) {
+    const subPage = this.page.locator(xpathCommonForSubPages + sub_locator + "']");
+    await expect(subPage).toBeVisible();
+    await subPage.click();
+  }
 
-    async isSubPageLoadedBuildingRobustWebApp() {
-        await expect(this.page.url()).toBe(urlSubPageBuildingRobustWebApp);
-        await expect(this.page).toHaveTitle(titleSubPageBuildingRobustWebApp);
-        await expect(this.uniqeElementSubPageBuildingRobustWebApp).toBeVisible();
-    }
-
-    async clickSubPageOptimizingBusProc() {
-        await expect(this.linkSubPageOptimizingBusPro).toBeVisible();
-        await this.linkSubPageOptimizingBusPro.click();
-    }
-
-    async isSubPageLoadedOptimizingBusProc() {
-        expect(this.page.url()).toBe(urlSubPageOptimizingBusPro);
-        await expect(this.page).toHaveTitle(titleSubPageOptimizingBusPro);
-        await expect(this.uniqeElementSubPageOptimizingBusPro).toBeVisible();
-    }
+  async isSubPageLoaded(sub_url: string, sub_title: string, unique_text: string) {
+    expect(this.page.url()).toBe(pageUri + sub_url);
+    await expect(this.page).toHaveTitle(sub_title);
+    const uniqeElement = this.page.locator(xpathCommonForUniqueText + unique_text + '")]');
+    console.log('uniqeElement: '+ uniqeElement);
+    await expect(uniqeElement).toBeVisible();
+  }
 }
