@@ -24,16 +24,16 @@ export class CasesPage {
     await expect(this.pageUniqueElementXpath).toBeVisible();
   }
 
-  async openSubPage(sub_locator: string) {
-    const subPage = this.page.locator(xpathCommonForSubPages + sub_locator + "']");
+  async openSubPage(subLocator: string) {
+    const subPage = this.page.locator(xpathCommonForSubPages + subLocator + "']");
     await expect(subPage).toBeVisible();
     await subPage.click();
   }
 
-  async isSubPageLoaded(sub_url: string, sub_title: string, unique_text: string) {
-    expect(this.page.url()).toBe(pageUri + sub_url);
-    await expect(this.page).toHaveTitle(sub_title);
-    const uniqeElement = this.page.locator(xpathCommonForUniqueText + unique_text + '")]');
+  async isSubPageLoaded(subUrl: string, subTitle: string, uniqueText: string) {
+    expect(this.page.url()).toBe(pageUri + subUrl);
+    await expect(this.page).toHaveTitle(subTitle);
+    const uniqeElement = this.page.locator(xpathCommonForUniqueText + uniqueText + '")]');
     console.log('uniqeElement: '+ uniqeElement);
     await expect(uniqeElement).toBeVisible();
   }
