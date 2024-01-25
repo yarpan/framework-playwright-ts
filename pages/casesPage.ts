@@ -55,5 +55,4 @@ export class CasesPage {
         await expect(this.page).toHaveTitle(titleSubPageOptimizingBusPro);
         await expect(this.uniqeElementSubPageOptimizingBusPro).toBeVisible();
     }
-    
 }
