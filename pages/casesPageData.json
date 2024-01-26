@@ -1,0 +1,34 @@
+[
+    {
+        "testSuite": "Use Cases Pop-ups",
+        "testName": "WebAppDevelopment",
+        "subLocator": "Building Robust Web Applications: Best Practices and Tips",
+        "subUrl": "building-robust-web-applications-best-practices-and-tips/",
+        "subTitle": "Building Robust Web Applications: Best Practices and Tips - platma",
+        "uniqueText": "With PLATMA, John gained an opportunity to create a web version of his mobile app"
+    },
+    {
+        "testSuite": "Use Cases Pop-ups",
+        "testName": "WorkFlowBuilder",
+        "subLocator": "Optimizing Business Processes with Workflow Builders",
+        "subUrl": "optimizing-business-processes-with-workflow-builders/",
+        "subTitle": "Optimizing Business Processes with Workflow Builders - platma",
+        "uniqueText": "Here’s Stacey, a young entrepreneur in the healthcare business. She struggled to find a cost-effective solution"
+    },
+    {
+        "testSuite": "Use Cases Pop-ups",
+        "testName": "ChatBot",
+        "subLocator": "Revolutionizing Customer Service with Chatbots",
+        "subUrl": "revolutionizing-customer-service-with-chatbots/",
+        "subTitle": "Revolutionizing Customer Service with Chatbots - platma",
+        "uniqueText": "Meet JiII. She has a small business and is using the Low-code"
+    },
+    {
+        "testSuite": "Use Cases Pop-ups",
+        "testName": "ApiConnectors",
+        "subLocator": "Efficiently Connecting and Sharing Data between Applications",
+        "subUrl": "efficiently-connecting-and-sharing-data-between-applications-with-robust-api-connector-solutions/",
+        "subTitle": "Efficiently Connecting and Sharing Data between Applications - platma",
+        "uniqueText": "Imagine a company that works for an e-commerce company. Both companies use multiple systems to manage their operations"
+    }
+]
