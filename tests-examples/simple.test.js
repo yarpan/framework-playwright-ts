@@ -1,11 +1,9 @@
 import { test, expect } from "@playwright/test";
 const baseUri = 'https://platma.com/';
 
-
 test.beforeEach(async ({ page }) => {
   //await page.goto(baseUri);
 });
-
 
 test('Open home page', async ({ page }) => {
   await page.goto(baseUri);
@@ -13,8 +11,6 @@ test('Open home page', async ({ page }) => {
   await expect(page).toHaveTitle("PLATMA - an extreme no-code platform to create IT solutions");
   await expect(page.locator("//div[@class='header_logo']")).toBeVisible();
 })
-
-
 
 test('Open page Contact us', async ({ page }) => {
   await page.goto(baseUri);
@@ -29,8 +25,6 @@ test('Open page Contact us', async ({ page }) => {
   const newPageBannerLocator = page.locator("//div[text()='Our addresses:']");
   await expect(newPageBannerLocator).toBeVisible();
 })
-
-
 
 test('Show error on sending empty feedback', async ({ page }) => {
   await page.goto(baseUri + 'contacts/');
@@ -49,8 +43,6 @@ test('Show error on sending empty feedback', async ({ page }) => {
   await expect(inputTextFieldLocator).toHaveClass('inputForm error');
 })
 
-
-
 test('Use case - Web Application', async ({ page }) => {
   await page.goto(baseUri + 'cases/');
   expect(page.url()).toBe(baseUri + 'cases/');
@@ -66,8 +58,6 @@ test('Use case - Web Application', async ({ page }) => {
   await expect(newPageBannerLocator).toBeVisible();
 })
 
-
-
 test('Use case - Workflow builder', async ({ page }) => {
   await page.goto(baseUri + 'cases/');
   expect(page.url()).toBe(baseUri + 'cases/');
@@ -81,10 +71,3 @@ test('Use case - Workflow builder', async ({ page }) => {
   const newPageBannerLocator = page.locator("//div[text()='WorkFlow builder']");
   await expect(newPageBannerLocator).toBeVisible();
 })
-
-
-
-
-
-
-
