@@ -8,9 +8,9 @@ const buttonMenuXpath = "//ul[@id='menu-main-menu']//*[contains(text(),'";
 enum mainMenu {
   item1 = "What’s Platma",
   item2 = "Use cases",
-  item3 = "Templates",
-  item4 = "Blog",
-  item5 = "Team",
+  item3 = "iTemplates",
+  item4 = "iBlog",
+  item5 = "iTeam",
   item6 = "Contacts us"
 }
 
