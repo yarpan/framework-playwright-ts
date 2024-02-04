@@ -1,0 +1,14 @@
+stages:
+  - test
+
+tests:
+  stage: test
+  image: mcr.microsoft.com/playwright:v1.41.1-jammy
+  parallel: 1
+  script:
+    - npm install ci
+    - npm install -D @playwright/test
+    - npm install dotenv --save
+    - npm install node-fetch
+    - npm ci
+    - npx playwright test --project=$PROJECT --shard=$SHARD
