@@ -7,4 +7,9 @@ test('Show validation on sending empty feedback', async ({ page }) => {
     await contactPage.isPageLoaded();
     await contactPage.clickButtonFeedback();
     await contactPage.checkEmptyFeedbackValidation();
+
+    await new Promise(r => setTimeout(r, 200));
+    await page.waitForTimeout(1000);
+    
+
 })
