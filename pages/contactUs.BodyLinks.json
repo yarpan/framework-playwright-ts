@@ -1,0 +1,37 @@
+[
+    {
+        "testName": "Wikimedia Foundation",
+        "linkLocator": "//a[@class='extiw']",
+        "linkUri": "https://foundation.wikimedia.org/wiki/Home"
+    },
+    {
+        "testName": "Jimmy Wales",
+        "linkLocator": "//a[@title='Jimmy Wales']",
+        "linkUri": "/wiki/Jimmy_Wales"
+    },
+    {
+        "testName": "About Wikipedia",
+        "linkLocator": "//a[@title='Wikipedia:About']",
+        "linkUri": "/wiki/Wikipedia:About"
+    },
+    {
+        "testName": "Teahouse",
+        "linkLocator": "//a[@title='Wikipedia:Teahouse']",
+        "linkUri": "/wiki/Wikipedia:Teahouse"
+    },
+    {
+        "testName": "Live help channel",
+        "linkLocator": "//a[@title='Wikipedia:IRC help disclaimer']",
+        "linkUri": "/wiki/Wikipedia:IRC_help_disclaimer"
+    },
+    {
+        "testName": "Help desk",
+        "linkLocator": "//a[@title='Wikipedia:Help desk']",
+        "linkUri": "/wiki/Wikipedia:Help_desk"
+    },
+    {
+        "testName": "Dispute resolution",
+        "linkLocator": "//a[@title='Wikipedia:Dispute resolution']",
+        "linkUri": "/wiki/Wikipedia:Dispute_resolution"
+    }
+]

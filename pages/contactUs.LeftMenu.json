@@ -1,0 +1,42 @@
+[
+    {
+        "testSuite": "Left Menu Links",
+        "testName": "Readers",
+        "subPageLocator": "Wikipedia:Contact us/Readers",
+        "subPageUrl": "/Readers",
+        "subPageTitle": "Wikipedia:Contact us/Readers - Wikipedia",
+        "subPageUniqueText": "If we don't have an article on what you're looking for, you can "
+    },
+    {
+        "testSuite": "Left Menu Links",
+        "testName": "Article subjects",
+        "subPageLocator": "Wikipedia:Contact us/Article subjects",
+        "subPageUrl": "/Article_subjects",
+        "subPageTitle": "Wikipedia:Contact us/Article subjects - Wikipedia",
+        "subPageUniqueText": "Editors interested in your article can be reached by leaving a note on the article"
+    },
+    {
+        "testSuite": "Left Menu Links",
+        "testName": "Licensing",
+        "subPageLocator": "Wikipedia:Contact us/Licensing",
+        "subPageUrl": "/Licensing",
+        "subPageTitle": "Wikipedia:Contact us/Licensing - Wikipedia",
+        "subPageUniqueText": "Are you concerned that something you've found here is "
+    },
+    {
+        "testSuite": "Left Menu Links",
+        "testName": "Donors",
+        "subPageLocator": "Wikipedia:Contact us/Donors",
+        "subPageUrl": "/Donors",
+        "subPageTitle": "Wikipedia:Contact us/Donors - Wikipedia",
+        "subPageUniqueText": "If you're interested in donating to Wikipedia, "
+    },
+    {
+        "testSuite": "Left Menu Links",
+        "testName": "Press and partnerships",
+        "subPageLocator": "Wikipedia:Contact us/Press and partnerships",
+        "subPageUrl": "/Press_and_partnerships",
+        "subPageTitle": "Wikipedia:Contact us/Press and partnerships - Wikipedia",
+        "subPageUniqueText": "If you work for an organisation that is interested in a cultural partnership with Wikipedia,"
+    }
+]
