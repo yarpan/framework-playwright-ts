@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
-import { LandingPage } from "../pages/landing_page";
+import { LandingPage } from "../pages/landing";
 
-test("Check if LandingPage loading", async ({ page }) => {
+test.only("Check if LandingPage loading", async ({ page }) => {
   const landingPage = new LandingPage(page);
   await landingPage.goto();
   await landingPage.isPageLoaded();

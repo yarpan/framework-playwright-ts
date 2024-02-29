@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { ContactUs } from "../pages/contactUs";
-import { WikiEnMainPage } from "../pages/wikiEnMainPage";
+import { WikiEnMainPage } from "../pages/main";
 import testSuiteBodyLinks from "../pages/contactUs.BodyLinks.json";
 import testSuiteLeftMenu from "../pages/contactUs.LeftMenu.json";
 
