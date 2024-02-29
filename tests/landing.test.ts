@@ -5,6 +5,7 @@ test("Check if LandingPage loading", async ({ page }) => {
   const landingPage = new LandingPage(page);
   await landingPage.goto();
   await landingPage.isPageLoaded();
+  await expect(page).toHaveScreenshot();
 });
 
 test("Check Links for different locales ", async ({ page }) => {
