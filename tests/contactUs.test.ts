@@ -14,7 +14,7 @@ test("Check BackToMainPage Button", async ({ page }) => {
   await wikiEnMainPage.isPageLoaded();
 });
 
-test.describe("Check Body Links", () => {
+test.describe("Check Body Links - DataDriven by JSON", () => {
   for (const testCase of testSuiteBodyLinks) {
     test(testCase.testName, async ({ page }) => {
       console.log("Test Case: " + testCase.testName);
@@ -26,7 +26,7 @@ test.describe("Check Body Links", () => {
   }
 });
 
-test.describe("Check Left Menu Items", () => {
+test.describe("Check Left Menu Items - DataDriven by JSON", () => {
   for (const testCase of testSuiteLeftMenu) {
     test(testCase.testName, async ({ page }) => {
       console.log("Test Case: " + testCase.testName);

@@ -1,7 +1,7 @@
 import { test, expect, chromium } from "@playwright/test";
 import { LandingPage } from "../pages/landing";
 
-test("Has title", async () => {
+test("Page has title", async () => {
     let browser = await chromium.launch();
     let page = await browser.newPage();
     await page.goto('https://www.wikipedia.org')
@@ -11,7 +11,7 @@ test("Has title", async () => {
 });
 
 
-test("Two Pages", async () => {
+test("Manage two Pages", async () => {
     let browser = await chromium.launch();
     const context = await browser.newContext();
     const pageOne = await context.newPage();
