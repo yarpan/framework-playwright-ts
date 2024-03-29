@@ -32,7 +32,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     screenshot: 'on', //'only-on-failure',
     //screenshot: ScreenshotMode | { mode: ScreenshotMode } & Pick<PageScreenshotOptions, 'fullPage' | 'omitBackground'>;
-    headless: true
+    headless: process.env.CI ? true : false
   },
 
   /* Configure projects for major browsers */

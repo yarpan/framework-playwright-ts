@@ -1,5 +1,4 @@
 import { test, expect, chromium } from "@playwright/test";
-import { LandingPage } from "../pages/landing";
 
 test("Page has title", async () => {
     let browser = await chromium.launch();
@@ -11,14 +10,21 @@ test("Page has title", async () => {
 });
 
 
-test("Manage two Pages", async () => {
+test("Manage two Windows with tho Tabs each", async () => {
     let browser = await chromium.launch();
-    const context = await browser.newContext();
-    const pageOne = await context.newPage();
-    const pageTwo = await context.newPage();
+    const contextOne = await browser.newContext();
+    const contextTwo = await browser.newContext();
 
-    await pageOne.goto("https://www.wikipedia.org");
-    await pageTwo.goto("https://playwright.dev");
+    const page11 = await contextOne.newPage();
+    const page12 = await contextOne.newPage();
+    const page21 = await contextTwo.newPage();
+    const page22 = await contextTwo.newPage();
+
+    await page11.goto("https://www.wikipedia.org");
+    await page12.goto("https://playwright.dev");
+    await page21.goto("https://www.google.com");
+    await page22.goto("https://amazon.com");
+
 
     await browser.close();
 });
@@ -52,6 +58,6 @@ test("check modal actions", async ({page, context, browser})=> {
     await pages[1].close();
     await page.locator("asd").click();
 
-    let contexts = await browser.contexts();
-    let pageOneFirstContext: Page = await contexts[0].pages[0]; 
+    let contexts = browser.contexts();
+    //let pageOneFirstContext: Page = await contexts[0].pages[0]; 
 })
