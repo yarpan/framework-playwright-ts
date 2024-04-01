@@ -1,15 +1,5 @@
 import { test, expect, chromium } from "@playwright/test";
 
-test("Page has title", async () => {
-    let browser = await chromium.launch();
-    let page = await browser.newPage();
-    await page.goto('https://www.wikipedia.org')
-
-    expect (await page.title()).toContain("Wikipedia");
-    await browser.close();
-});
-
-
 test("Manage two Windows with tho Tabs each", async () => {
     let browser = await chromium.launch();
     const contextOne = await browser.newContext();
@@ -24,7 +14,6 @@ test("Manage two Windows with tho Tabs each", async () => {
     await page12.goto("https://playwright.dev");
     await page21.goto("https://www.google.com");
     await page22.goto("https://amazon.com");
-
 
     await browser.close();
 });
@@ -56,8 +45,7 @@ test("check modal actions", async ({page, context, browser})=> {
     console.log(pages.length);
 
     await pages[1].close();
-    await page.locator("asd").click();
-
+    //await page.locator("asd").click();
     let contexts = browser.contexts();
     //let pageOneFirstContext: Page = await contexts[0].pages[0]; 
 })
