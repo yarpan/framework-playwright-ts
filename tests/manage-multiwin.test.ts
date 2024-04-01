@@ -42,7 +42,7 @@ test("check modal actions", async ({page, context, browser})=> {
     await page.waitForTimeout(1000);
 
     let pages = await context.pages();
-    console.log(pages.length);
+    console.log('# number of pages opened' + pages.length);
 
     await pages[1].close();
     //await page.locator("asd").click();

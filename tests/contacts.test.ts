@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { ContactsPage } from "../pages/contacts";
-import { WikiEnMainPage } from "../pages/main";
+import { MainEnPage } from "../pages/main";
 import testSuiteBodyLinks from "../pages/contacts.BodyLinks.json";
 import testSuiteLeftMenu from "../pages/contacts.LeftMenu.json";
 
@@ -10,7 +10,7 @@ test("Check BackToMainPage Button", async ({ page }) => {
   await contactUsPage.isPageLoaded();
   await contactUsPage.clickButtonBack();
 
-  const wikiEnMainPage = new WikiEnMainPage(page);
+  const wikiEnMainPage = new MainEnPage(page);
   await wikiEnMainPage.isPageLoaded();
 });
 

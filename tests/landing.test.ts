@@ -5,9 +5,8 @@ test("Check if LandingPage loading", async ({ page }) => {
   const landingPage = new LandingPage(page);
   await landingPage.goto();
   await landingPage.isPageLoaded();
-  //await expect(page).toHaveScreenshot();
-  //await expect(page).toHaveScreenshot({ fullPage: true });
-  //xpect(await page.screenshot({ fullPage: true })).toMatchSnapshot('./snapshots/landing-page-chromium-win32.png');
+  await page.screenshot({ path: './screenshots/screenshot.png' });
+  await page.screenshot({ path: './screenshots/screenlong.png', fullPage: true });
 
 });
 

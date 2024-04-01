@@ -4,7 +4,7 @@ const pageUri = 'https://en.wikipedia.org/wiki/Wikipedia:Main';
 const pageTitle = 'Wikipedia, the free encyclopedia';
 const uniqueElementXpath = '//span[@id="Welcome_to_Wikipedia"]';
 
-export class WikiEnMainPage {
+export class MainEnPage {
   readonly page: Page;
 
   constructor(page: Page) {
