@@ -7,7 +7,7 @@ const buttonBackXpath = '//span[@class="mw-ui-button"]';
 const xpathCommonForSubPages = '//a[@title="';
 const xpathCommonForUniqueText = '//p[contains(text(), "';
 
-export class ContactUs {
+export class ContactsPage {
   readonly page: Page;
 
   constructor(page: Page) {
