@@ -1,12 +1,13 @@
 import { test, expect, request } from "@playwright/test";
 import { RequestInfo, RequestInit, Response } from "node-fetch";
 import { URLSearchParams } from "url";
+import emailData from '../test-data/email-data.json';
 
 const baseUrl = "https://api.mail7.io";
 
 const keys = {
-  apikey: "cf320230-0104-49e5-82a3-8fa23d4fc74e",
-  apisecret: "3776bb3e-87a1-40c2-b5b8-9b6f6c78446b",
+  apikey: emailData.apikey,
+  apisecret: emailData.apisecret,
 };
 
 const requestOptions = {

@@ -1,4 +1,5 @@
 import { Locator, Page } from "@playwright/test";
+import emailData from '../test-data/email-data.json';
 
 const url = "http://email";
 
@@ -8,9 +9,7 @@ export class EmailPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.resetPasswordLink = this.page.locator(
-      'text="Please use the link to validate your email address"'
-    );
+    this.resetPasswordLink = this.page.locator(emailData.locatorResetPasswordLink);
   }
 
   async renderContent(content: string) {

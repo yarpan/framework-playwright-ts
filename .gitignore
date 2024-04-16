@@ -5,4 +5,4 @@
 /playwright-report/
 /test-results/
 /unstaged/
-/test-data/email-data.ts
+/test-data/email-data.json
