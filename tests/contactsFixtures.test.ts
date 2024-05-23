@@ -1,7 +1,7 @@
-import { test, expect } from './fixtures';
-import { MainEnPage } from "../pages/main";
-import testSuiteBodyLinks from "../pages/contacts.BodyLinks.json";
-import testSuiteLeftMenu from "../pages/contacts.LeftMenu.json";
+import { test, expect } from '../fixtures/fixtures';
+import { MainEnPage } from "../page-object/mainPage";
+import testSuiteBodyLinks from "../page-object/contacts.BodyLinks.json";
+import testSuiteLeftMenu from "../page-object/contacts.LeftMenu.json";
 
 test("Check BackToMainPage Button", async ({ page, contactsPage }) => {
   await contactsPage.clickButtonBack();

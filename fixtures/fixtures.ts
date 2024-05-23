@@ -1,6 +1,6 @@
 import { test as base } from '@playwright/test';
-import { LandingPage } from '../pages/landing';
-import { ContactsPage } from '../pages/contacts';
+import { LandingPage } from '../page-object/landingPage';
+import { ContactsPage } from '../page-object/contactsPage';
 
 type MyFixtures = {
   landingPage: LandingPage;

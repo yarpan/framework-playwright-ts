@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import { LandingPage } from '../pages/landing';
+import { LandingPage } from '../page-object/landingPage';
 
 test("Check if LandingPage loading", async ({ page }) => {
   const landingPage = new LandingPage (page);

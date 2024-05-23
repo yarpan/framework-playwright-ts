@@ -1,8 +1,8 @@
 import { test, expect } from "@playwright/test";
-import { ContactsPage } from "../pages/contacts";
-import { MainEnPage } from "../pages/main";
-import testSuiteBodyLinks from "../pages/contacts.BodyLinks.json";
-import testSuiteLeftMenu from "../pages/contacts.LeftMenu.json";
+import { ContactsPage } from "../page-object/contactsPage";
+import { MainEnPage } from "../page-object/mainPage";
+import testSuiteBodyLinks from "../page-object/contacts.BodyLinks.json";
+import testSuiteLeftMenu from "../page-object/contacts.LeftMenu.json";
 
 test("Check BackToMainPage Button", async ({ page }) => {
   const contactUsPage = new ContactsPage(page);
