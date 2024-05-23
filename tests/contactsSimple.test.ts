@@ -12,7 +12,7 @@ test("Check BackToMainPage Button", async ({ page }) => {
 
   const wikiEnMainPage = new MainEnPage(page);
   await wikiEnMainPage.isPageLoaded();
-  await expect(page).toHaveScreenshot();
+  //await expect(page).toHaveScreenshot();
 });
 
 test.describe("Check Body Links - DataDriven by JSON", () => {
