@@ -1,15 +1,19 @@
 import { expect, type Locator, type Page } from "@playwright/test";
 
-const pageUri = "https://www.wikipedia.org/";
-const pageTitle = "Wikipedia";
-const pageUniqueElementXpath = '//span[text()="Read Wikipedia in your language "]';
 
 export class LandingPage {
   readonly page: Page;
+  readonly pageUri: string;
+  readonly pageTitle: string;
+  readonly pageUniqueElementXpath: string;
   readonly localeData: string | any[];
 
   constructor(page: Page) {
     this.page = page;
+    this.pageUri = "https://www.wikipedia.org/";
+    this.pageTitle = "Wikipedia";
+    this.pageUniqueElementXpath = '//span[text()="Read Wikipedia in your language "]';
+
     this.localeData = [
       [
         "English",
@@ -57,13 +61,13 @@ export class LandingPage {
   }
 
   async goto() {
-    await this.page.goto(pageUri);
+    await this.page.goto(this.pageUri);
   }
 
   async isPageLoaded() {
-    expect(this.page.url()).toBe(pageUri);
-    await expect(this.page).toHaveTitle(pageTitle);
-    await expect(this.page.locator(pageUniqueElementXpath)).toBeVisible();
+    expect(this.page.url()).toBe(this.pageUri);
+    await expect(this.page).toHaveTitle(this.pageTitle);
+    await expect(this.page.locator(this.pageUniqueElementXpath)).toBeVisible();
   }
 
   async openLink(i: number) {
